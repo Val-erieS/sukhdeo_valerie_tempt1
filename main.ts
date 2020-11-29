@@ -1,6 +1,11 @@
-let a = 30
-let b = 50
-if (b > a) {
-    light.setPixelColor(5, light.rgb(255, 0, 0))
+while (true) {
+    console.log("temperature: " + input.temperature(TemperatureUnit.Fahrenheit))
+    if (input.temperature(TemperatureUnit.Fahrenheit) > 112) {
+        light.setAll(light.rgb(225, 0, 0))
+    } else if (input.temperature(TemperatureUnit.Fahrenheit) > 94) {
+        light.setAll(light.rgb(0, 225, 0))
+    } else {
+        light.setAll(light.rgb(0, 0, 225))
+    }
+    
 }
-
